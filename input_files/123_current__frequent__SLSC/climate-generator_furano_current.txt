@@ -1,0 +1,15 @@
+LandisData "Climate Config"				
+		
+ClimateTimeSeries			Monthly_AverageAllYears
+ClimateFile				    climateconfig_rokugo.csv
+ClimateFileFormat			Monthly_Temp-C_Precip-mmMonth
+
+SpinUpClimateTimeSeries		Monthly_AverageAllYears
+SpinUpClimateFile			climateconfig_rokugo.csv
+SpinUpClimateFileFormat		Monthly_Temp-C_Precip-mmMonth
+
+
+>>UsingFireClimate			yes
+>>RelativeHumiditySlopeAdjust             77.68
+>>SpringStart				30
+>>WinterStart 				320

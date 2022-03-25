@@ -1,0 +1,18 @@
+LandisData  Ecoregions
+
+>>	Active	MapCode	Name	Description
+>>	---	----------	----------	----------
+	yes	1	eco1	"climate1"
+	yes	2	eco2	"climate2"
+	yes	3	eco3	"climate3"
+	yes	4	eco4	"climate4"
+	yes	5	eco5	"climate5"
+	yes	6	eco6	"climate6"
+	yes	7	eco7	"climate7"
+	yes	8	eco8	"climate8"
+	yes	9	eco9	"climate9"
+	yes	10	eco10	"climate10"
+	no	40	eco40	"shinringenkai4"
+	no	50	eco50	"shinringenkai5"
+	no	60	eco60	"shinringenkai6"
+	no	0	eco0	"outoflandscape"

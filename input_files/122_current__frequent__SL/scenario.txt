@@ -1,0 +1,39 @@
+>> Furano
+
+LandisData Scenario
+
+Duration 115
+
+Species 		"./species_furano.txt"
+
+Ecoregions 		"./ecoregions.txt" <<
+EcoregionsMap 		"./climate_final.tif"
+CellLength 100 << meters, so cell area = 1 ha
+
+>> Succession Extension Initialization File
+>> -------------------- -------------------
+
+"NECN Succession"	"./NECN_Succession.txt"
+
+
+>> Disturbance Extensions Initialization File
+>> ---------------------- -------------------
+"Biomass Harvest"		"./BiomassHarvest.txt"
+
+>>"Base Wind"				"./BaseWind.txt"
+
+DisturbancesRandomOrder no
+
+>> Output Extensions Initialization File
+>> ----------------- -------------------
+ "Output Biomass"		"./output_biomass.txt"   << output biomass
+ "Output Biomass-by-Age" "./outputbiomass_by_age.txt"
+
+>>"Output Biomass Community"      "./outputBiomassCommunity.txt"
+>>"Output Max Species Age"		"./max-spp-age.output.txt"
+>> "Output Cohort Statistics"    	"./cohort-stats.output.txt"		<< any succession ext.
+>>"Max Species Age" 		max-spp-age.output-base.txt  		<< any succession ext.
+>> Reclassification			reclass.output-base.txt 		<< for age-only succession ONLY
+
+
+>>RandomNumberSeed 4,357

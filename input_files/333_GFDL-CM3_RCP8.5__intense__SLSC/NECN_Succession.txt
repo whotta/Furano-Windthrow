@@ -1,0 +1,116 @@
+LandisData "NECN Succession"	<<"NECN Succession version 5+"
+
+Timestep  1
+
+SeedingAlgorithm  WardSeedDispersal
+
+InitialCommunities      	"inicom_east.txt"
+InitialCommunitiesMap   	"inicom_east.tif"
+ClimateConfigFile		climate-generator_furano_GFDL-CM3_RCP8.5.txt
+
+SoilDepthMapName				NECN_inputmap/soildepth_east.tif <<
+SoilDrainMapName				NECN_inputmap/soildrain_east.tif <<
+SoilBaseFlowMapName				NECN_inputmap/baseflow_east.tif <<
+SoilStormFlowMapName			NECN_inputmap/stormflow_east.tif <<
+SoilFieldCapacityMapName		NECN_inputmap/fieldcapa_east.tif 
+SoilWiltingPointMapName			NECN_inputmap/wiltpoint_east.tif  
+SoilPercentSandMapName			NECN_inputmap/sand_east.tif
+SoilPercentClayMapName			NECN_inputmap/clay_east.tif 
+InitialSOM1CsurfMapName			NECN_inputmap/som1csurf_east.tif <<とりあえずの値
+InitialSOM1NsurfMapName			NECN_inputmap/som1nsurf_east.tif <<とりあえずの値
+InitialSOM1CsoilMapName			NECN_inputmap/som1csoil_east.tif 
+InitialSOM1NsoilMapName			NECN_inputmap/som1nsoil_east.tif
+InitialSOM2CMapName				NECN_inputmap/som2c_east.tif
+InitialSOM2NMapName				NECN_inputmap/som2n_east.tif
+InitialSOM3CMapName				NECN_inputmap/som3c_east.tif
+InitialSOM3NMapName				NECN_inputmap/som3n_east.tif
+InitialDeadWoodSurfaceMapName	NECN_inputmap/dwsurf_east.tif <<とりあえずの値
+InitialDeadCoarseRootsMapName	NECN_inputmap/dwsurf_east.tif <<とりあえずの値
+
+CalibrateMode 	no
+SmokeModelOutputs yes
+WaterDecayFunction Ratio <<Linear or Ratio
+
+ProbabilityEstablishAdjust 	0.1	<<default=1.0
+InitialMineralN			12.0<<とりあえずの値
+InitialFineFuels		0.99
+AtmosphericNSlope		0.08<<とりあえずの値
+AtmosphericNIntercept	0.005<<とりあえずの値
+Latitude				43.15
+DenitrificationRate		0.1 <<was 0.5<<とりあえずの値
+DecayRateSurf			0.8	    <<Tuned(G:\Tuning\soil\spotpy_testing_soil_landscape_5_grid: stable)
+DecayRateSOM1			0.25	<<Tuned(G:\Tuning\soil\spotpy_testing_soil_landscape_5_grid: stable)
+DecayRateSOM2			0.01	<<Tuned(G:\Tuning\soil\spotpy_testing_soil_landscape_5_grid: stable)
+DecayRateSOM3			0.005	<<Tuned(G:\Tuning\soil\spotpy_testing_soil_landscape_5_grid: stable)
+GrassThresholdMultiplier 0.1
+
+MaximumLAI<<とりあえずの値
+
+>> Shade		Max LAI
+>> Class	
+>> ----------	--------------------	
+	1			1 
+	2			2.5 
+	3			3.5 
+	4			6
+	5			8
+		
+
+LightEstablishmentTable	<<Tuned for Furano
+					
+>>	Spp Shade	Probability					
+>>	Class		by Actual Shade					
+>>	 ----------	--------------------					
+>>		0		1		2		3		4		5
+	1	1.0		0.5		0.25	0.2		0.1		0.1
+	2	0.6		1.0		0.5		0.25	0.2		0.1
+	3	0.01	0.6		1.0		0.5		0.25	0.2
+	4	0.0		0.01	0.6		1.0		0.5		0.25
+	5	0.0		0.0		0.01	0.5		1.0		1.0
+
+SpeciesParameters  <<Tuned(G:\Tuning\spotpy_testing_furano_all_litterwood_siteLAI_201015_grid_plant_k-0.42_extend & G:\Tuning\Sasa\95_random_k-0.42_PEA_1_tune93_GTM0.5)
+>>----------------------------------------------								
+>> Species  Funct	N-fix?	GDD		GDD		Min		Max		Leaf	Epi-	Leaf		FRoot	Wood	CRoot	Leaf  		FRoot 	Wood  	CRoot 	Littr 	MaxANPP MaxAGB
+>>	   		ional			Min		Max		Jan		Drought	Long	cormic	Lign%		Lign%	Lign%	Lign%	CN    		CN    	CN    	CN    	CN	
+>> 	   		Type							Temp					resprout		
+Abiesach	1	N	560	2386	-25	0.67	3	N	0.216998053	0.225	0.312	0.204	44.31359688	43	482	84	74	500	50000
+Picejezo	2	N	1247	2562	-30	0.27	7.1	N	0.21	0.192	0.29	0.234	58.8	58	535	84	100	500	80000
+Picegleh	3	N	1247	2562	-30	0.1	10	N	0.183	0.192	0.2726	0.234	58.8	58	535	84	100	500	90000
+Tilijapo	4	N	1400	3137	-17	0.2	1	N	0.17	0.334	0.2	0.31	17.3	26	417	50	35	250	80000
+Aceritaya	5	N	1222	3100	-18	0.23	1	N	0.213	0.334	0.19	0.312	25	23.3	388	50	41.1	250	100000
+Ulmulaci	6	N	1204	6960	-20	0.33	1	Y	0.137	0.27	0.2	0.251	18.81246481	26	417	50	65	250	80000
+Kalopict	7	N	1204	6960	-20	0.33	1	Y	0.137	0.27	0.2	0.251	18.81246481	26	417	50	65	250	100000
+Quermong	8	N	1100	4571	-17	0.67	1	Y	0.199616517	0.334	0.225	0.303	22.21498612	58	345	113	32	450	100000
+Betuerma	9	N	561	1830	-21	0.5	1	N	0.21	0.27	0.2018	0.251	23.92548857	26	384	50	65	500	50000
+Betumaxi	10	N	926	2061	-19	0.5	1	N	0.21	0.27	0.2018	0.251	23.92548857	26	384	50	65	500	50000
+Fraxmand	11	N	1050	5482	-23	0.5	1	Y	0.13109579	0.27	0.2018	0.251	19.55779385	26	189	80	65	350	90000
+sasa_spp	12	N	400	4000	-10	0.97	3	Y	0.25	0.2	0.25	0.25	20	28	333	222	50	200	5100
+
+FunctionalGroupParameters  <<Tuned(G:\Tuning\spotpy_testing_furano_all_litterwood_siteLAI_201015_grid_plant_k-0.42_extend & G:\Tuning\Sasa\95_random_k-0.42_PEA_1_tune93_GTM0.5)
+>> Name		Index	PPDF1	PPDF2	PPDF3	    PPDF4	    FCFRAC	BTOLAI	KLAI	MAXLAI	PPRPTS2	PPRPTS3	Wood	Monthly	 Mort	   Drop   CRootFrac 	FRootFRac
+>> 					T-Mean	T-Max	T-shape	    T-shape	    leaf											DecayR	WoodMort Shape	   Month
+Abiesach	1	18	35	1	3	0.48	-0.9	14000	10	1	0.8	0.03	0.0002	25	10	0.23	0.2
+Picejezo	2	18	35	1	3	0.48	-0.9	8000	10	1	0.8	0.03	0.0004	25	10	0.23	0.2
+Picegleh	3	18	35	1	3	0.48	-0.9	8000	10	1	0.8	0.03	0.0004	25	10	0.23	0.2
+Tilijapo	4	25	45	1	3	0.3	-0.9	4000	6	1	0.8	0.03	0.0006	25	9	0.2	0.5
+Aceritaya	5	22	42	1	3.5	0.3	-0.9	4000	6	1	0.8	0.03	0.0004	25	9	0.2	0.5
+Ulmulaci	6	22	42	1	3.5	0.3	-0.9	4000	6	1	0.8	0.03	0.0006	25	9	0.2	0.5
+Kalopict	7	25	45	1	3	0.3	-0.9	4000	6	1	0.8	0.03	0.0006	25	9	0.2	0.5
+Quermong	8	25	45	1	3	0.365	-0.9	4000	6	1	0.8	0.03	0.0004	25	9	0.206	0.481
+Betuerma	9	22	42	1	3.5	0.3	-0.9	4000	6	1	0.8	0.03	0.0002	25	9	0.2	0.5
+Betumaxi	10	22	42	1	3.5	0.3	-0.9	4000	6	1	0.8	0.03	0.0002	25	9	0.2	0.5
+Fraxmand	11	22	42	1	3.5	0.3	-0.9	4000	6	1	0.8	0.03	0.0004	25	9	0.2	0.5
+sasa_spp	12	15	32	1	3.5	0.435	-0.81	600	7.94	1	0.8	0.03	0.0001	21.68506	9	0.25	0.35
+
+FireReductionParameters<<とりあえずの値
+>> Based on Stacy Drury's lit review/analysis. See 'Fuel consumption based on fire severity class.docx'
+>>	Severity	WoodLitter	Litter	SOM
+>>	Fire		Reduct		Reduct	Reduction
+	1			0.05		1.0 		1.0 <<0.1     
+	2			0.2			1.0			1.0 <<0.5
+	3			0.4			1.0			1.0
+
+HarvestReductionParameters<<とりあえずの値
+>>	Name			WoodLitter	Litter	SOM		CohortWood	CohortLeaf
+>>				Reduct		Reduct	Reduction	Removal		Removal
+	ClearCut    0.0    0.0     0.0         1.0         0.0

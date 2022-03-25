@@ -1,0 +1,61 @@
+LandisData  "Biomass Harvest"
+
+>>
+>> Version: beta v1.0
+>> Note:　風倒とSLの挙動チェック用
+>> Management Mapのコード
+>>    1:hokuen_east
+>>    255:no data
+
+Timestep    1
+
+
+ManagementAreas	"harvest.tif"
+Stands			"stand.tif"
+
+>> -----------------------------------------
+>> PRESCRIPTIONS
+
+>> ClearCut (Windthrow, Salvage logging, & Scarification)
+Prescription ClearCut
+>> -----------------------------------------
+	StandRanking	Random		
+>> Stand qualification ---------------------
+	MinimumTimeSinceLastHarvest		50
+>> -----------------------------------	   min  max
+	SiteSelection	PartialStandSpread		1	10	
+
+	CohortsRemoved	SpeciesList <<modify threshold age of advanced regenerations (200513hotta)
+		Abiesach	All
+		Picejezo	All
+		Picegleh    All
+		Tilijapo	All
+		Aceritaya	All
+		Ulmulaci	All
+		Kalopict	All
+		Quermong	All
+		Betuerma	All
+		Betumaxi	All
+		Fraxmand	All
+		sasa_spp    1-200 (99%)
+		
+	
+
+>>-----------------------------------------------------------------
+>> PRESCRIPTION IMPLEMENTATION 
+
+HarvestImplementations
+>>  Mgmt Area   Prescription	Harvest Area    Begin Time  End Time
+>>  ---------   ------------	------------    ----------  --------
+		1       ClearCut            20%         15          15
+>>		1       ClearCut            20%         40          40
+		1       ClearCut            20%         65          65
+>>		1       ClearCut            20%         90          90
+		
+
+>>-----------------------------------------------------------------
+>> OUTPUTS
+PrescriptionMaps    OutputMaps/harvest/prescripts-{timestep}.img
+BiomassMaps         OutputMaps/harvest/biomass-removed-{timestep}.img
+EventLog            biomass-harvest-event-test-log.csv
+SummaryLog	    	biomass-harvest-summary-log.csv

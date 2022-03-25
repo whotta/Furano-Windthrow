@@ -1,0 +1,19 @@
+LandisData "Output Biomass-by-Age"
+
+Timestep  1
+
+>> OUTPUTS
+MapNames    OutputMaps/age_biomass/{species}-{ageclass}-{timestep}.img
+
+>> Species list
+Species 	Abiesach	ageclass1(1)	ageclass2(<55)
+			Picejezo	ageclass1(1)	ageclass2(<59)
+			Picegleh    ageclass1(1)	ageclass2(<59)
+			Tilijapo	ageclass1(1)	ageclass2(<44)
+			Aceritaya	ageclass1(1)	ageclass2(<70)
+			Ulmulaci	ageclass1(1)	ageclass2(<57)
+			Kalopict	ageclass1(1)	ageclass2(<45)
+			Quermong	ageclass1(1)	ageclass2(<43)
+			Betuerma	ageclass1(1)	ageclass2(<36)
+			Betumaxi	ageclass1(1)	ageclass2(<36)
+			Fraxmand	ageclass1(1)	ageclass2(<46)

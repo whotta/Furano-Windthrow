@@ -1,0 +1,32 @@
+LandisData  Species
+
+>>inicomのコホート樹齢に即してLongevityを一部変更(200212 hotta)
+>>						Sexual		Shade	Fire	Seed Disperal Dist	Vegetative	Sprout Age	Post-Fire
+>> Name		Longevity	Maturity	Tol.	Tol.	Effective	Maximum	Reprod Prob	Min	Max		Regen
+>> ----		---------	--------	-----	----	---------	-------	-----------	----------	--------
+Abiesach	200			25			4		1		20			160		0			0	0		none		<<bekanbe_トドマツ
+Picejezo	330	        30      	5	    3	    80	        200	    0	        0	0	    none		<<エゾマツ
+Picegleh    400	        30	        5	    3	    80	        200	    0	        0	0	    none        <<アカエゾマツ
+Tilijapo	240	        15	        3	    1	    75	        150	    0.445	    10	200	    resprout	<<シナノキ（アカジナ）
+Aceritaya	285			10			3		3		500			1000	0.5			50	60		resprout	<<いたや類
+Ulmulaci	340			40			3		1		91			402		0.2			0	72		resprout	<<オヒョウ_bekanbe_ハルニレ
+Kalopict	400			25			3		2		10			290		0.2			0	74		resprout	<<ハリギリ（セン）_とりあえずミズナラ
+Quermong	400			25			2		2		10			290		0.2			0	74		resprout	<<bekanbe_ミズナラ
+Betuerma	300	        15	        1	    2	    300	        5000	0.2	        0	19	    resprout	<<ダケカンバ
+Betumaxi	230	　　　　　　15	　　　　　　1	　　　2	　　　300	　　　　　　5000	　　　0.2	　　　　　　0	19	　　　resprout	<<ウダイカンバ
+Fraxmand	300			30			3		2		75			100		0.2			0	62		resprout	<<bekanbe_ヤチダモ
+sasa_spp	200			1			1		1		30			500		0.75		5	5		resprout    <<ササ_donan
+
+>>original
+>>Abiesach	200			25			4		1		20			160		0			0	0		none		<<bekanbe_トドマツ
+>>Picejezo	330	        30      	5	    3	    80	        200	    0	        0	0	    none		<<エゾマツ
+>>Picegleh  400	        30	        5	    3	    80	        200	    0	        0	0	    none        <<アカエゾマツ
+>>Tilijapo	200	        15	        3	    1	    75	        150	    0.445	    10	200	    resprout	<<シナノキ（アカジナ）
+>>Aceritaya	200			10			3		3		500			1000	0.5			50	60		resprout	<<いたや類
+>>Ulmulaci	300			40			3		1		91			402		0.2			0	72		resprout	<<オヒョウ_bekanbe_ハルニレ
+>>Kalopict	400			25			3		2		10			290		0.2			0	74		resprout	<<ハリギリ（セン）_とりあえずミズナラ
+>>Quermong	400			25			2		2		10			290		0.2			0	74		resprout	<<bekanbe_ミズナラ
+>>Betuerma	300	        15	        1	    2	    300	        5000	0.2	        0	19	    resprout	<<ダケカンバ
+>>Betumaxi	230	　　　　　　15	　　　　　　1	　　　2	　　　300	　　　　　　5000	　　　0.2	　　　　　　0	19	　　　resprout	<<ウダイカンバ
+>>Fraxmand	300			30			3		2		75			100		0.2			0	62		resprout	<<bekanbe_ヤチダモ
+>>sasa_spp	200			1			1		1		30			500		0.75		5	5		resprout    <<ササ_donan
